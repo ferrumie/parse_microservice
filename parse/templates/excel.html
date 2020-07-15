@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+  </form>
+  <form action="#" method="get">
+    <input type="text" value="8" name="mytextbox" size="1"/>
+    <input type="submit" class="btn" value="Click" name="mybtn">
+  </form>
+
+  <p><a href="{% url 'parse:index' %}">Return to home</a></p>
+{% endblock %}
