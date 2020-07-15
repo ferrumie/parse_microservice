@@ -19,7 +19,7 @@
         rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="{% static bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="{% static 'css/styles.css' %}" rel="stylesheet">
@@ -55,7 +55,7 @@
             
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="{% url 'excelApi:index' %}">Home</a></li>
+                    <li><a href="{% url 'parse:index' %}">Home</a></li>
                     <li><a href="">About Us</a></li>
                     <li><a href="">Contact Us</a></li>
                     <li><a href="">Documentation</a></li>
@@ -110,7 +110,7 @@
                 <div id="rectan"></div>
                 <div classs= "row" id="rectangle"></div>
                 <div id="rectangup"></div>
-                <div id="results"></div>
+                <div id="results">{{final_data}}</div>
                 <a  href="" >  <svg id="back" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <rect width="20" height="20" fill="url(#pattern0)"/>
                     <defs>
